@@ -6,3 +6,18 @@
 # слово2: количество
 #
 # Убедитесь, что слова записаны в алфавитном порядке.
+x = ''
+with open('task3.txt', "r", encoding='utf-8') as f:
+   file1=f.read()
+x+=file1
+x=x.lower()
+c = x.split()
+c = sorted(c)
+print (c)
+x = set(c)
+x = sorted(x)
+print (x)
+
+from collections import Counter
+counts = Counter(c)
+print(counts)
